@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a{
+    text-decoration: none;
+    color: #9A9EA8;
+    border: 1px solid rgba(124, 67, 153, 0.578);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: rgba(171, 106, 223, 0.407) 0px 2.5px 20px;
+    transition:.3s ;
+    
+}
+a:hover{
+    box-shadow: rgba(46, 52, 223, 0.495) 0px 2.5px 20px;
+    color: rgba(137, 43, 226, 0.719);
+}
+.container{
+    padding: 0 3rem;
+}
+
+#tour{
+    margin: 2rem 0;
+}
+.all-tours{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    /* align-items: center; */
+}
+.content{
+    text-align: center;
+    margin:15px 0 ;
+}
+.content h1{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content p{
+    font-size: 16px;
+    margin: 10px auto 20px;
+    width: 90%;
+}
+
+.card{
+    margin-bottom: 40px;
+}
+.card img{
+    width: 100%;
+}
+
+.pic h2{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    opacity: 0;
+    background-color: rgba(179, 172, 238, 0.466);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgba(34, 59, 202, 0.39)  0px 20px 55px, rgba(202, 83, 166, 0.484) 0px -12px 30px, rgba(202, 34, 34, 0.56) 0px 4px 6px, rgba(192, 62, 192, 0.456) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.pic {
+    overflow: hidden;
+    position: relative;
+}
+.pic img{
+    transition: transform .7s  ;
+}
+.pic:hover img{
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+.pic:hover h2{
+    opacity: 1;
+}
+
+
+@media only screen and (max-width:576px){
+    
+    .container{
+        padding: 0 1rem;
+    }
+    
+    .all-tours{
+        display: block;
+    }
+
+    .pic h2{
+        font-size: 25px;
+        width: 60%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:768px){
+
+    .container{
+        padding: 0 1.5rem;
+    }
+
+    .all-tours{
+        display: block;
+    }
+
+    .pic h2{
+        font-size: 25px;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:992px){
+
+    .container{
+        padding: 0 2rem;
+    }
+
+    .all-tours{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 47%;
+    }
+
+    .pic h2{
+        width: 65%;
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (min-width:992px) and (max-width:1440px){
+    .container{
+        padding: 0 3rem;
+    }
+
+    .all-tours{
+        display: flex;
+        justify-content: space-between;
+    }
+    .pic h2{
+        width: 80%;
+        text-align: center;
+    }
+
+}
